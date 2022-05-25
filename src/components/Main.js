@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ListDisplay from './ListDisplay'
+import '../App.css'
 
 const Main = () => {
 
@@ -15,23 +16,26 @@ const Main = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setList([...list, {task: task, category: category}])
+    setTask('')
   }
 
   return (
 
-    <div>
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <input type='text' placeholder='task' onChange={(e) => handleChange(e)}></input>
+    <div id='main'>
+        <form onSubmit={(e) => handleSubmit(e)} id='item-form'>
+          <div id='input'>
+            <input type='text'placeholder='task' onChange={(e) => handleChange(e)} value={task}></input>
             <select onChange={(e) => setCategory(e.target.value)}>
                 <option defaultValue disabled selected>category</option>
                 <option value='chores'>chores</option>
                 <option value='errands'>errands</option>
                 <option value='work'>work</option>
             </select>
+          </div>
             <button type='submit'>Add</button>
-        </form>
-        <ListDisplay list={list}/>
-    </div>
+          </form>
+        <ListDisplay list={list} setList={setList}/>
+      </div>
   )
 }
 
