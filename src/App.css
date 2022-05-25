@@ -21,10 +21,10 @@
   height: 10vh;
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
   background-color: lightgray;
   border-radius: 15px;
-  padding-bottom: 1%;;
+  /* padding-bottom: 1%;; */
 }
 
 select {
