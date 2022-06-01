@@ -5,8 +5,8 @@ const About = () => {
   const navigate = useNavigate()
 
   const handleClick = () => {
-    alert("We are headed to the details page, with the parameter of 'aSpecificWord'")
-    navigate('/details/aSpecificWord')
+    alert("We are headed to the details page, with the parameter of 'charmandar'")
+    navigate('/details/charmander')
   }
 
   return (
