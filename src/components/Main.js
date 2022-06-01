@@ -20,8 +20,8 @@ const Main = () => {
   }
 
   return (
-
     <div id='main'>
+      <h1>Add Task</h1>
         <form onSubmit={(e) => handleSubmit(e)} id='item-form'>
           <div id='input'>
             <input type='text'placeholder='task' onChange={(e) => handleChange(e)} value={task}></input>

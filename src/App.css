@@ -54,6 +54,10 @@ button {
   color: white;
 }
 
+#link-btn {
+  width: fit-content;
+}
+
 #input {
   display: flex;
   width: 50%;
@@ -107,3 +111,4 @@ p {
   border-radius: 15px; 
   padding-bottom: 2.5vh;
 }
+
