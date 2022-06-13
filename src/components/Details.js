@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
 const Details = () => {
@@ -18,7 +19,7 @@ const Details = () => {
   return (
     <div>
       <h1>Details Page</h1>
-      <h2>{name}</h2>
+      <h2>{pokemon}</h2>
       <h3>This page is dynamic, and can show information based off of parameters in the URL!</h3>
 
     </div>

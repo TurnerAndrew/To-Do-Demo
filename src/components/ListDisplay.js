@@ -3,6 +3,7 @@ import Item from './Item'
 import '../App.css'
 
 const ListDisplay = (props) => {
+  console.log(props)
 
  const { list, setList } = props
  const [selected, setSelected] = useState('')
