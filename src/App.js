@@ -13,7 +13,7 @@ function App() {
         <Route index element={<About />} />
         <Route path="/addTask" element={<Main />} />
         <Route path="/team/*" element={<Team />} />
-        <Route path="/details/:id" element={<Details />} />
+        <Route path="/details/:pokemon" element={<Details />} />
       </Routes>
     </div>
   );
