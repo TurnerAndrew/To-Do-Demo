@@ -6,6 +6,8 @@ const Header = () => {
 
   const context = useContext(TodayContext)
 
+  console.log(context.todaysItems.length)
+
   return (
     <header>
       <Link to="/">

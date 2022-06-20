@@ -16,9 +16,7 @@ const Today = () => {
     })
 
   return (
-    <TodayProvider>
-      <div>{listMapped}</div>
-    </TodayProvider>
+    <div>{listMapped}</div>
   )
 }
 

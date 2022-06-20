@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import TodayContext from './today-context'
 
 const TodayProvider = (props) => {
 
+   
     const addItemToToday = (item) => {
-        TodayContext.todaysItems.push(item)
+        todayContext.todaysItems.push(item)
     }
 
     const todayContext = {

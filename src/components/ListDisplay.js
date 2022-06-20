@@ -9,7 +9,7 @@ const ListDisplay = (props) => {
  const [selected, setSelected] = useState('')
 
 const listMapped = list.filter((item) => {
-  console.log(item)
+  // console.log(item)
   if(selected) return item.title === selected
     return item}).map((item, index) => {
     return <Item key={index} id={index} task={item} list={list} setList={setList}/> 
