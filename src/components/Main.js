@@ -6,10 +6,7 @@ import axios from "axios";
 
 const Main = () => {
   const [allCategories, setAllCategories] = useState([]);
-<<<<<<< HEAD
-=======
   // const [item, setItem] = useState({})
->>>>>>> 5bc3adfb15200b166f08312adf7ada8aad88df52
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -63,12 +60,9 @@ const Main = () => {
               category
             </option>
             {catOptions}
-<<<<<<< HEAD
-=======
             {/* <option value="chores">chores</option>
             <option value="errands">errands</option>
             <option value="work">work</option> */}
->>>>>>> 5bc3adfb15200b166f08312adf7ada8aad88df52
           </select>
         </div>
         <button type="submit">Add</button>

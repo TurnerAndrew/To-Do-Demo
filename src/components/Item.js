@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import TodayContext from '../store/today-context'
 import "../App.css";
 import axios from "axios";
 
+
 const Item = ({ task, id, list, setList }) => {
-  console.log(task);
+  const context = useContext(TodayContext)
   const [checked, setChecked] = useState(false);
 
   const handleDelete = () => {
@@ -25,6 +27,7 @@ const Item = ({ task, id, list, setList }) => {
       </h2>
       <h4>{task.title}</h4>
       <h1 onClick={handleDelete}>x</h1>
+      <button onClick={() => context.addItem(task)}>Add to today's list</button>
     </div>
   );
 };
