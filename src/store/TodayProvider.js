@@ -1,20 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import TodayContext from './today-context'
 
 const TodayProvider = (props) => {
-
+    const [todaysItems, setTodaysItems] = useState([])
+    const addItem = (item) => {
+        setTodaysItems([...todaysItems, item])
+    }
    
-    const addItemToToday = (item) => {
-        todayContext.todaysItems.push(item)
-    }
-
-    const todayContext = {
-        todaysItems: [],
-        addItem: addItemToToday
-    }
 
     return (
-        <TodayContext.Provider value={todayContext}>
+        <TodayContext.Provider value={{todaysItems, addItem}}>
             {props.children}
         </TodayContext.Provider>
     )

@@ -9,13 +9,17 @@ const Main = () => {
   // const [item, setItem] = useState({})
   const [list, setList] = useState([]);
 
+  const getTasks = () => {
+    axios
+      .get('http://localhost:4000/api/getAllTasks')
+      .then((res) => setList(res.data))
+  }
+
   useEffect(() => {
     axios
       .get('http://localhost:4000/api/getCategories')
       .then((res) => setAllCategories(res.data))
-    axios
-      .get('http://localhost:4000/api/getAllTasks')
-      .then((res) => setList(res.data))
+    getTasks()
   },[])
 
   const catOptions = allCategories.map((cat, index) => {
@@ -28,10 +32,10 @@ const Main = () => {
       description: "",
       category: null,
     },
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       axios
         .post('http://localhost:4000/api/addTask', values)
-        .then((res) => console.log(res.data))
+        .then((res) => getTasks())
       console.log(values);
     },
   });
